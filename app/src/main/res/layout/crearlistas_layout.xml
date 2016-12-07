@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/searchVehicle"
+                android:minWidth="44dip"
+                android:layout_alignBottom="@+id/remolque"
+                style="@android:style/Widget.Button"
+                android:background="@mipmap/vehicle" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="5"
+                android:id="@+id/placaInput"
+                android:hint="Placa"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/searchVehicle"
+                android:layout_toEndOf="@+id/searchVehicle"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="5"
+                android:id="@+id/remolqueInput"
+                android:hint="Remolque"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/placa"
+                android:layout_toEndOf="@+id/placa"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchEmployee"
+                android:background="@mipmap/personal"
+                android:layout_weight="0.04" />
+
+            <TextView
+                android:text="Empleado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Agregar"
+                android:layout_width="wrap_content"
+                android:id="@+id/addButton"
+                android:layout_weight="1"
+                android:layout_height="35dp" />
+
+            <Button
+                android:text="Cancelar"
+                android:layout_width="wrap_content"
+                android:id="@+id/cancelButton"
+                android:layout_weight="1"
+                android:layout_height="35dp" />
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listado" />
+
+
+    </LinearLayout>
+</FrameLayout>

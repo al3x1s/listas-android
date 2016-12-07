@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_main"
+    android:id="@+id/flContent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -10,72 +10,6 @@
     tools:showIn="@layout/app_bar_main"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/searchVehicle"
-            android:minWidth="44dip"
-            android:layout_alignBottom="@+id/remolque"
-            android:background="@drawable/ic_action_name"
-            style="@android:style/Widget.Button" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="5"
-            android:id="@+id/placa"
-            android:hint="Placa"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/searchVehicle"
-            android:layout_toEndOf="@+id/searchVehicle"
-            android:layout_weight="1" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="5"
-            android:id="@+id/remolque"
-            android:hint="Remolque"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/placa"
-            android:layout_toEndOf="@+id/placa"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:layout_weight="1" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:layout_width="38dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/searchEmployee"
-            android:textAppearance="@android:style/TextAppearance.Material.Small"
-            android:background="@mipmap/ic_launcher"
-            android:layout_weight="0.04" />
-
-        <TextView
-            android:text="Empleado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            android:layout_weight="1" />
-    </LinearLayout>
 
 </LinearLayout>

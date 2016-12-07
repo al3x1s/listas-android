@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp">
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Placa"
+                android:layout_width="77dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/unidad"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_weight="0.03" />
+
+            <TextView
+                android:text="Empleado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/empleado"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="RE"
+                android:layout_width="77dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/remolque"
+                android:textColor="@android:color/holo_blue_light"
+                android:layout_weight="0.03" />
+
+            <TextView
+                android:text="Observaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/observaciones"
+                android:layout_weight="1"
+                android:textColor="@android:color/holo_green_light" />
+        </LinearLayout>
+
+
+</LinearLayout>
