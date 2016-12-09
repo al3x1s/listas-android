@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="info.tinyservice.listas.MainActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -18,7 +24,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:id="@+id/searchVehicle"
+                android:id="@+id/searchVehicleButton"
                 android:minWidth="44dip"
                 android:layout_alignBottom="@+id/remolque"
                 style="@android:style/Widget.Button"
@@ -61,17 +67,27 @@
             <Button
                 android:layout_width="38dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/searchEmployee"
+                android:id="@+id/searchPersonalButton"
                 android:background="@mipmap/personal"
                 android:layout_weight="0.04" />
 
             <TextView
-                android:text="Empleado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView2"
-                android:layout_weight="1" />
+                android:id="@+id/personallbl"
+                android:layout_weight="1"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
         </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/observacionesInput"
+            android:hint="Observaciones" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -99,5 +115,15 @@
             android:id="@+id/listado" />
 
 
+
+
+
     </LinearLayout>
-</FrameLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+</android.support.design.widget.CoordinatorLayout>

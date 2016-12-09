@@ -14,19 +14,22 @@
 
             <TextView
                 android:text="Placa"
-                android:layout_width="77dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/unidad"
                 android:textStyle="normal|bold"
                 android:textColor="@android:color/holo_blue_dark"
-                android:layout_weight="0.03" />
+                android:layout_weight="0.03"
+                android:layout_width="65sp" />
 
             <TextView
                 android:text="Empleado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/empleado"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/background_dark" />
 
         </LinearLayout>
 
@@ -37,11 +40,11 @@
 
             <TextView
                 android:text="RE"
-                android:layout_width="77dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/remolque"
                 android:textColor="@android:color/holo_blue_light"
-                android:layout_weight="0.03" />
+                android:layout_weight="0.03"
+                android:layout_width="65sp" />
 
             <TextView
                 android:text="Observaciones"
