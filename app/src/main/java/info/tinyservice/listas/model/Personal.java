@@ -1,6 +1,9 @@
 package info.tinyservice.listas.model;
 
 public class Personal {
+
+    public Personal() {}
+
     public int getId() {
         return id;
     }

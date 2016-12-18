@@ -7,9 +7,9 @@
             android:icon="@mipmap/personal"
             android:title="Crear lista" />
         <item
-            android:id="@+id/nav_empleados"
+            android:id="@+id/nav_listasLogger"
             android:icon="@drawable/ic_menu_send"
-            android:title="Empleados" />
+            android:title="Listados enviados" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"

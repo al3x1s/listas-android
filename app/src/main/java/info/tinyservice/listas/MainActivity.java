@@ -18,10 +18,13 @@ import android.widget.Toast;
 
 import info.tinyservice.listas.database.DatabaseHelper;
 import info.tinyservice.listas.fragments.CrearLista;
+import info.tinyservice.listas.fragments.ListasLoggerFragment;
+import info.tinyservice.listas.model.ListadoLogger;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout mDrawer;
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mDrawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -67,7 +70,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.action_settings:
                 return true;
             case R.id.action_updatedb:
-                Toast.makeText(this.getApplicationContext(), "Actualizando base de datos", Toast.LENGTH_SHORT).show();
                 updateDB();
                 return true;
         }
@@ -92,6 +94,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_crearlista:
                 fragmentClass = CrearLista.class;
                 break;
+            case R.id.nav_listasLogger:
+                fragmentClass = ListasLoggerFragment.class;
+                break;
             default:
                 fragmentClass = CrearLista.class;
         }
@@ -112,4 +117,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mDrawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void changeToCrearLista(ListadoLogger lista){
+        Toast.makeText(this.getApplicationContext(), "Cargando lista", Toast.LENGTH_SHORT).show();
+        navigationView.setCheckedItem(R.id.nav_crearlista);
+        setTitle("Abriendo lista");
+
+        Fragment fragment = new CrearLista();
+
+        Bundle args = new Bundle();
+        args.putSerializable("lista_data", lista);
+        fragment.setArguments(args);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+
+    }
+
 }

@@ -44,7 +44,6 @@ public class SearchVehicleDialog extends DialogFragment {
     private ArrayList<Vehicle> vehicleData = new ArrayList<>();
     private ArrayList<Vehicle> filteredData = new ArrayList<>();
 
-
     private OnAddVehicleListener callback;
     public interface OnAddVehicleListener {
         void onAddVehicleSubmit(Vehicle vehicle);
@@ -104,7 +103,7 @@ public class SearchVehicleDialog extends DialogFragment {
         private ItemFilter mFilter = new ItemFilter();
 
         public VehicleAdapter(Context context, List<Vehicle> data) {
-            super(context, R.layout.searhemployee_rowlist, data);
+            super(context, R.layout.searchvehicle_rowlist, data);
             this.data = data;
         }
 

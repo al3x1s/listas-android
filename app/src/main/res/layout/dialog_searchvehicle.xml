@@ -9,7 +9,8 @@
         android:inputType="text"
         android:ems="10"
         android:id="@+id/vehicleToSearch"
-        android:hint="Placa" />
+        android:hint="Placa"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
 
     <ListView
         android:layout_width="match_parent"

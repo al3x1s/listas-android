@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 import info.tinyservice.listas.R;
 import info.tinyservice.listas.model.Listado;
+import info.tinyservice.listas.model.Personal;
 
 public class ListadoAdapter extends ArrayAdapter<Listado>{
     private ArrayList<Listado> dataSet;
@@ -48,9 +49,12 @@ public class ListadoAdapter extends ArrayAdapter<Listado>{
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
+
+        Personal personal = dataModel.getPersonal();
+        String nombre = personal != null ? personal.getNombre() : "";
         viewHolder.txtUnidad.setText(dataModel.getPlaca());
         viewHolder.txtRemolque.setText(dataModel.getRemolque());
-        viewHolder.txtEmpleado.setText(dataModel.getPersonal().getNombre());
+        viewHolder.txtEmpleado.setText(nombre);
         viewHolder.txtObservaciones.setText(dataModel.getObservaciones());
         return convertView;
     }

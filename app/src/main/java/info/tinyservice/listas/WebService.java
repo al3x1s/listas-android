@@ -1,15 +1,3 @@
-package info.tinyservice.listas;
-
-import java.util.List;
-
-import info.tinyservice.listas.model.Listado;
-import info.tinyservice.listas.model.Personal;
-import info.tinyservice.listas.model.Vehicle;
-import retrofit2.Call;
-import retrofit2.http.Body;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
-
 /*
  * Copyright 2016 Irving Gonzalez (ialexis93@gmail.com)
  *
@@ -26,6 +14,22 @@ import retrofit2.http.POST;
  * limitations under the License.
  */
 
+package info.tinyservice.listas;
+
+import java.util.List;
+
+import info.tinyservice.listas.model.DestinatarioMail;
+import info.tinyservice.listas.model.Listado;
+import info.tinyservice.listas.model.ListadoLogger;
+import info.tinyservice.listas.model.Personal;
+import info.tinyservice.listas.model.Vehicle;
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
+import retrofit2.http.POST;
+
 public interface WebService {
     @GET("personal")
     Call<List<Personal>> getAllPersonal();
@@ -33,7 +37,14 @@ public interface WebService {
     @GET("vehicles")
     Call<List<Vehicle>> getAllVehicles();
 
+    @GET("listado")
+    Call<List<ListadoLogger>> getAllListado();
+
+    @GET("destinatario")
+    Call<List<DestinatarioMail>> getAllDestinatarios();
+
+    @FormUrlEncoded
     @POST("listado")
-    Call<List<Listado>> sendListado(@Body List<Listado> listado);
+    Call<List<Listado>> sendListado(@Field("listado") String listado, @Field("emailTo") String[] emalTo);
 
 }

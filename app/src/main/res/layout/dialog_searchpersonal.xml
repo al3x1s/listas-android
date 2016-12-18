@@ -9,7 +9,8 @@
         android:inputType="text"
         android:ems="10"
         android:id="@+id/empleadoSearch"
-        android:hint="Nombre" />
+        android:hint="Nombre"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
 
     <ListView
         android:layout_width="match_parent"
